@@ -1,0 +1,28 @@
+name: Autograding
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout student submission
+      uses: actions/checkout@v3
+
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Compile Java Code
+      run: |
+        set -e
+        ls -la src || true
+        javac src/Main.java
+
+    - name: Run Autograder
+      run: |
+        python3 autograder/grade.py

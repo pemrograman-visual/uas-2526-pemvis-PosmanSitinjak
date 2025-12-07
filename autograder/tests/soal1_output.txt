@@ -1,0 +1,6 @@
+Daftar rating: 4 5 2 3 1 4
+Rata-rata: 3.17
+Tertinggi: 5
+Terendah: 1
+Reviewer rating ≥4: 3 orang
+Kondisi cukup, masih perlu peningkatan.

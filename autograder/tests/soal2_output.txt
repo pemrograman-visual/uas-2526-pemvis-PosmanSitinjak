@@ -1,0 +1,5 @@
+Nama            StokAwal  Terjual  Sisa   Status
+Indomie         20        5        15     Stok aman
+Susu UHT        4         3        1      Stok menipis
+Roti Tawar      6         6        0      Habis, segera restock!
+Kopi Sachet     3         3        0      Habis, segera restock!

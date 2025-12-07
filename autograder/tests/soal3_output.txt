@@ -1,0 +1,7 @@
+Total konsumsi:
+Budi = 110 wh
+Tika = 200 wh
+Rian = 600 wh
+
+Total konsumsi kamar = 910 wh
+Konsumsi masih dalam batas wajar.

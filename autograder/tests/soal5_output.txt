@@ -1,0 +1,7 @@
+Andi  → Lolos Syarat Awal
+Sari  → Tidak Lolos
+Nur   → Tidak Lolos
+Rafi  → Lolos Syarat Awal
+Lilis → Lolos Syarat Awal
+
+Total pendaftar lolos: 3

@@ -1,0 +1,13 @@
+Daftar Shift:
+Sinta = 2
+Daniel = 5
+Lala = 7
+Yohan = 1
+Riko = 4
+
+Total shift = 19
+Rata-rata = 3.8
+Shift terbanyak: Lala (7)
+Shift tersedikit: Yohan (1)
+
+Distribusi shift tidak merata, beberapa asisten terbebani.
