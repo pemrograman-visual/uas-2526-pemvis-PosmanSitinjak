@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Soal no2"/>
+        <attribute name="authors" value="Christofer"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-12-17 02:42:30 PM"/>
+        <attribute name="created" value="Q2hyaXN0b2ZlcjtMQVBUT1AtQ0wxRTkyOUM7MjAyNS0xMi0xNzswMjowMjoyOSBQTTszMzI5"/>
+        <attribute name="edited" value="Q2hyaXN0b2ZlcjtMQVBUT1AtQ0wxRTkyOUM7MjAyNS0xMi0xNzswMjo0MjozMCBQTTsyOzM0MzQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, sisa" type="Integer" array="False" size=""/>
+            <declare name="status" type="String" array="False" size=""/>
+            <output expression="&quot;jumlah barang&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="barang" type="String" array="True" size="n"/>
+            <declare name="stok" type="Integer" array="True" size="n"/>
+            <declare name="terjual" type="Integer" array="True" size="n"/>
+            <declare name="jumlahterjual" type="Integer" array="True" size="n"/>
+            <declare name="stokawal" type="Integer" array="True" size="n"/>
+            <assign variable="stokawal[n]" expression="0"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;nama barang&quot;" newline="True"/>
+                <input variable="barang[i]"/>
+                <output expression="&quot;jumlah stoknya&quot;" newline="True"/>
+                <input variable="stok[i]"/>
+                <output expression="&quot;jumlah yang terjual&quot;" newline="True"/>
+                <input variable="terjual[i]"/>
+                <if expression="jumlahterjual[n]&lt;=stokawal">
+                    <then>
+                        <output expression="&quot;invalid!ulangi&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;hasil laporan&quot;" newline="True"/>
+            <output expression="&quot;barang&quot;&amp;&quot;|&quot;&amp;&quot;stokawal&quot;&amp;&quot;|&quot;&amp;&quot;terjual&quot;&amp;&quot;|&quot;&amp;&quot;sisa&quot;&amp;&quot;|&quot;&amp;&quot;status&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="sisa" expression="stok[i] - terjual[i]"/>
+                <assign variable="status" expression="statusstok(sisa)"/>
+            </for>
+            <output expression="barang[i]&amp;&quot;&quot;&amp;stok[i]&amp;&quot;&quot;&amp;terjual[i]&amp;&quot;&quot;&amp;sisa&amp;&quot;&quot;&amp;status" newline="True"/>
+        </body>
+    </function>
+    <function name="statusstok" type="String" variable="pesan">
+        <parameters>
+            <parameter name="sisabarang" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="pesan" type="String" array="False" size=""/>
+            <if expression="sisabarang=0">
+                <then>
+                    <assign variable="pesan" expression="&quot;Habis segera restock!&quot;"/>
+                </then>
+                <else>
+                    <if expression="sisabarang &lt; 5">
+                        <then>
+                            <assign variable="pesan" expression="&quot;stok menipis&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="sisabarang&gt;=5">
+                                <then>
+                                    <assign variable="pesan" expression="&quot;stok aman&quot;"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

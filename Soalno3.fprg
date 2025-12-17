@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Soalno3"/>
+        <attribute name="authors" value="Christofer"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-12-17 03:08:25 PM"/>
+        <attribute name="created" value="Q2hyaXN0b2ZlcjtMQVBUT1AtQ0wxRTkyOUM7MjAyNS0xMi0xNzswMjo0MjozNiBQTTszMzMx"/>
+        <attribute name="edited" value="Q2hyaXN0b2ZlcjtMQVBUT1AtQ0wxRTkyOUM7MjAyNS0xMi0xNzswMzowODoyNSBQTTsxOzM0NDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, jumlahorang, jumlahbarang, totalorang, totalkamar" type="Integer" array="False" size=""/>
+            <declare name="nama" type="String" array="False" size=""/>
+            <assign variable="totalkamar" expression="0"/>
+            <assign variable="jumlahorang" expression="0"/>
+            <output expression="&quot;totalkomsumsi:&quot;" newline="True"/>
+            <for variable="i" start="0" end="jumlahorang" direction="inc" step="1">
+                <input variable="nama"/>
+                <input variable="jumlahbarang"/>
+                <assign variable="totalorang" expression="hitungtotalbarang(jumlahbarang)"/>
+                <output expression="nama&amp;&quot;=&quot;&amp;totalorang&amp;&quot;wh&quot;" newline="True"/>
+                <assign variable="totalkamar" expression="totalkamar + jumlahbarang"/>
+            </for>
+            <output expression="&quot;&quot;" newline="True"/>
+            <output expression="&quot;total konsumsi kamar=&quot;&amp;totalkamar&amp;&quot;wh&quot;" newline="True"/>
+            <output expression="hitungkamar(banyakitem)" newline="True"/>
+        </body>
+    </function>
+    <function name="hitungtotal" type="Integer" variable="total">
+        <parameters>
+            <parameter name="banyakitem" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <declare name="j, nilai, total" type="Integer" array="False" size=""/>
+            <assign variable="total" expression="0"/>
+            <for variable="j" start="0" end="banyakitem" direction="inc" step="1">
+                <input variable="nilai"/>
+                <assign variable="total" expression="total + nilai"/>
+            </for>
+        </body>
+    </function>
+    <function name="totalkamar" type="Integer" variable="total">
+        <parameters>
+            <parameter name="banyakitem" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="totalkamar" type="Integer" array="False" size=""/>
+            <if expression="totalkamar&lt;=1200">
+                <then>
+                    <output expression="&quot;Komsumsi masih dalam batas wajar&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Konsumsi melebihi batas wajar&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
